@@ -455,7 +455,7 @@ y_pred = gbm.predict(test_X)
 
 
 # compute test error (MAE)
-mae = mean_absolute_percentage_error(test_y, y_pred)
+mae= mean_absolute_percentage_error(test_y, y_pred)
 
 print('GBM MAE: {:.2f}'.format(mae))
 
@@ -470,7 +470,7 @@ y_train_pred = gbm.predict(train_X)
 # In[43]:
 
 
-# compute train error (MAE)
+# compute train error (RMSE)
 train_mae = mean_absolute_percentage_error(train_y, y_train_pred)
 print(f"Train MAE: {train_mae:.2f}")
 
