@@ -251,7 +251,7 @@ else:
     print(f"p-value={p_value:.3f} failed to reject null hypothesis.")
 
 
-# # The above ANOVA test for Gender feature shows that there is statistical significant difference in means of customer lifetime value(cltv) of different gender cateogries of customers.
+# # The above ANOVA test for Gender feature shows that there is no statistical significant difference in means of customer lifetime value(cltv) of different gender cateogries of customers.
 
 # In[21]:
 
@@ -454,10 +454,10 @@ y_pred = gbm.predict(test_X)
 # In[41]:
 
 
-# compute test error (RMSE)
-rmse = mean_absolute_percentage_error(test_y, y_pred)
+# compute test error (MAE)
+mae = mean_absolute_percentage_error(test_y, y_pred)
 
-print('GBM RMSE: {:.2f}'.format(rmse))
+print('GBM MAE: {:.2f}'.format(mae))
 
 
 # In[42]:
@@ -470,9 +470,9 @@ y_train_pred = gbm.predict(train_X)
 # In[43]:
 
 
-# compute train error (RMSE)
-train_rmse = mean_absolute_percentage_error(train_y, y_train_pred)
-print(f"Train RMSE: {train_rmse:.2f}")
+# compute train error (MAE)
+train_mae = mean_absolute_percentage_error(train_y, y_train_pred)
+print(f"Train MAE: {train_mae:.2f}")
 
 
 # Here, in GBM algorithm training and testing error are nearly equal.. we can say best possible performance on the given data.
